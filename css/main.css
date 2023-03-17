@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-white: #ececec;
+    --clr-gray: #e2e2e2;
+    --clr-red: #961818;
+    --clr-main: #15173c;
+    --clr-footer: #404263;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* RESET */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: var(--clr-main);
+}
+
+aside {
+    padding: 3.5rem 0rem 1rem 2rem;
+    color: var(--clr-white);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+main {
+    margin: 1.5rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: var(--clr-white);
+}
+
+
+/* DENTRO DE ASIDE */
+
+
+.logo {
+    font-weight:400;
+    font-size: 1.5rem;
+}
+
+.texto-footer {
+    color: var(--clr-footer);
+    font-size: 1rem;
+}
+
+
+
+
+
+/* DENTRO DE MAIN */
+
+
+.titulo-principal {
+    color: var(--clr-main);
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+
+.producto-imagen {
+    max-width: 100%;
+    background-color: gray;
+}
