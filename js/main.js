@@ -136,9 +136,13 @@ const productos = [
 //     precio: ,
 // },
 
+//Definiciones:
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelector("#titulo-principal");
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
 
+//Funciones:
 function cargarProductos(productosElegidos) {
 
     contenedorProductos.innerHTML="";
@@ -157,11 +161,13 @@ function cargarProductos(productosElegidos) {
         `
 
         contenedorProductos.append(div);
-
     })
+
+    actualizarBotonesAgregar();
 }
 
-cargarProductos(productos);
+//Cuando se carga por primera ves la pagina!
+cargarProductos(productos); 
 
 botonesCategorias.forEach(boton => {
 
@@ -173,14 +179,39 @@ botonesCategorias.forEach(boton => {
 
         if(e.currentTarget.id === "todos") {
 
-            cargarProductos(productos)
+            tituloPrincipal.innerHTML = "Todos los productos";
+            cargarProductos(productos);
 
         } else {
+            tituloPrincipal.innerHTML = `${e.currentTarget.id}`;
+            const productosBoton = productos.filter(producto => producto.categorias.id === e.currentTarget.id);
+            cargarProductos(productosBoton);
 
-            const productosBoton = productos.filter(producto => producto.categorias.id === e.currentTarget.id)
-            cargarProductos(productosBoton)
-            
         }
     })
 
 })
+
+function actualizarBotonesAgregar() {
+
+    botonesAgregar = document.querySelectorAll(".producto-agregar");
+
+    botonesAgregar.forEach(boton => {
+
+        boton.addEventListener("click", agregarAlCarrito)
+
+    })
+}
+
+//Carro vacio por primera ves:
+const productosEnCarrito = [];
+
+function agregarAlCarrito (e) {
+
+    const idBoton = e.currentTarget.id;
+
+    const productoAgregado = productos.find(producto => producto.id === idBoton)
+
+    productosEnCarrito.push(productoAgregado)
+    console.log(productosEnCarrito)
+}
