@@ -84,6 +84,7 @@ main {
     cursor: pointer;
     display: flex;
     gap: .5rem;
+    width: 100%;
     padding: 1rem;
     align-items: center;
 }
@@ -91,7 +92,6 @@ main {
 .boton-menu.active{
     background-color: var(--clr-white);
     color: var(--clr-main);
-    width: 100%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     position: relative;
@@ -105,7 +105,7 @@ main {
     height: 2rem;
     bottom: 100%;
     right: 0;
-    background-color: var(--clr-main);
+    background-color: transparent;
     box-shadow: 0 1rem 0 var(--clr-white);   
 }
 
@@ -141,9 +141,6 @@ main {
     color: var(--clr-footer);
     font-size: 1rem;
 }
-
-
-
 
 
 /* DENTRO DE MAIN */
