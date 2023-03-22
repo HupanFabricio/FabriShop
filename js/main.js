@@ -139,9 +139,11 @@ const productos = [
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 
-function cargarProductos() {
+function cargarProductos(productosElegidos) {
 
-    productos.forEach(producto => {
+    contenedorProductos.innerHTML="";
+
+    productosElegidos.forEach(producto => {
 
         const div = document.createElement("div");
         div.classList.add("producto")
@@ -159,7 +161,7 @@ function cargarProductos() {
     })
 }
 
-cargarProductos();
+cargarProductos(productos);
 
 botonesCategorias.forEach(boton => {
 
@@ -169,6 +171,16 @@ botonesCategorias.forEach(boton => {
 
         e.currentTarget.classList.add("active");
 
+        if(e.currentTarget.id === "todos") {
+
+            cargarProductos(productos)
+
+        } else {
+
+            const productosBoton = productos.filter(producto => producto.categorias.id === e.currentTarget.id)
+            cargarProductos(productosBoton)
+            
+        }
     })
 
 })
