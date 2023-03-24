@@ -12,7 +12,7 @@ const productos = [
     },
     {
         id: "abrigo-02",
-        titulo: "Campera Inflada Niño Niña Corderito Abrigada Kids Invierno",
+        titulo: "Campera Inflada Niño Niña Corderito Abrigada Kids ",
         img: "../img/Abrigos/Campera Inflada Niño Niña Corderito Abrigada Kids Invierno.png",
         categorias: {
             nombre: "Abrigos",
@@ -142,8 +142,11 @@ const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito");
+let productosEnCarrito;
+const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito")); 
 
 //Funciones:
+
 function cargarProductos(productosElegidos) {
 
     contenedorProductos.innerHTML="";
@@ -166,46 +169,6 @@ function cargarProductos(productosElegidos) {
 
     actualizarBotonesAgregar();
 }
-
-//Cuando se carga por primera ves la pagina!
-cargarProductos(productos); 
-
-botonesCategorias.forEach(boton => {
-
-    boton.addEventListener("click", (e) => {
-
-        botonesCategorias.forEach(boton => boton.classList.remove("active"));
-
-        e.currentTarget.classList.add("active");
-
-        if(e.currentTarget.id === "todos") {
-
-            tituloPrincipal.innerHTML = "Todos los productos";
-            cargarProductos(productos);
-
-        } else {
-            tituloPrincipal.innerHTML = `${e.currentTarget.id}`;
-            const productosBoton = productos.filter(producto => producto.categorias.id === e.currentTarget.id);
-            cargarProductos(productosBoton);
-
-        }
-    })
-
-})
-
-function actualizarBotonesAgregar() {
-
-    botonesAgregar = document.querySelectorAll(".producto-agregar");
-
-    botonesAgregar.forEach(boton => {
-
-        boton.addEventListener("click", agregarAlCarrito)
-
-    })
-}
-
-//Carro vacio por primera ves:
-const productosEnCarrito = [];
 
 function agregarAlCarrito (e) {
 
@@ -230,3 +193,54 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acu, producto) => acu + producto.cantidad, 0);
     numerito.innerHTML = nuevoNumerito;
 }
+
+function actualizarBotonesAgregar() {
+
+    botonesAgregar = document.querySelectorAll(".producto-agregar");
+
+    botonesAgregar.forEach(boton => {
+
+        boton.addEventListener("click", agregarAlCarrito)
+
+    })
+}
+
+// Ejecucion:
+
+//Cuando se carga por primera ves la pagina!
+
+cargarProductos(productos);
+
+//Resets:
+
+//Reset carrito-compras
+if(productosEnCarritoLS) {
+    productosEnCarrito = productosEnCarritoLS;
+    actualizarNumerito();
+} else {
+    productosEnCarrito = [];
+}
+
+//Eventos votones categoria.
+botonesCategorias.forEach(boton => {
+
+    boton.addEventListener("click", (e) => {
+
+        botonesCategorias.forEach(boton => boton.classList.remove("active"));
+
+        e.currentTarget.classList.add("active");
+
+        if(e.currentTarget.id === "todos") {
+
+            tituloPrincipal.innerHTML = "Todos los productos";
+            cargarProductos(productos);
+
+        } else {
+            tituloPrincipal.innerHTML = `${e.currentTarget.id}`;
+            const productosBoton = productos.filter(producto => producto.categorias.id === e.currentTarget.id);
+            cargarProductos(productosBoton);
+
+        }
+    })
+
+})

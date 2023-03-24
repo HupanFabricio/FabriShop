@@ -296,6 +296,26 @@ main {
 
 /* EXTRAS */
 
+h3 {
+    max-width: 200px;
+    white-space: nowrap;   
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carrito-producto-titulo h3:hover{
+    max-width: 100%;
+    white-space: normal;  
+    overflow: visible;    
+}
+
+.carrito-producto-cantidad,
+.carrito-producto-precio,
+.carrito-producto-subtotal,
+p{
+    text-align: center;
+}
+
 .disabled {
     display: none;
 }
