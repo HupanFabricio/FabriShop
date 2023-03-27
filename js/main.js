@@ -3,7 +3,7 @@ const productos = [
     {
         id: "abrigo-01",
         titulo: "Campera Chelsea",
-        img: "../img/Abrigos/Campera Chelsea.png",
+        img: "../img/Abrigos/campera chelsea.png",
         categorias: {
             nombre: "Abrigos",
             id: "abrigos"
