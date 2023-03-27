@@ -4,7 +4,7 @@ const productos = [
         id: "abrigo-01",
         titulo: "Campera Chelsea",
         // img: "../img/Abrigos/campera chelsea.png",
-        img:"https://github.com/HupanFabricio/FabriShop/blob/main/img/Abrigos/campera%20chelsea.png",
+        img:"../img/Abrigos/campera chelsea.png",
         categorias: {
             nombre: "Abrigos",
             id: "abrigos"
