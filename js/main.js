@@ -3,7 +3,6 @@ const productos = [
     {
         id: "abrigo-01",
         titulo: "Campera Chelsea",
-        // img: "../img/Abrigos/campera chelsea.png",
         img:"./img/Abrigos/campera chelsea.png",
         categorias: {
             nombre: "Abrigos",
@@ -14,7 +13,7 @@ const productos = [
     {
         id: "abrigo-02",
         titulo: "Campera Inflada Niño Niña Corderito Abrigada Kids ",
-        img: "../img/Abrigos/Campera Inflada Niño Niña Corderito Abrigada Kids Invierno.png",
+        img: "./img/Abrigos/Campera Inflada Niño Niña Corderito Abrigada Kids Invierno.png",
         categorias: {
             nombre: "Abrigos",
             id: "abrigos"
@@ -24,7 +23,7 @@ const productos = [
     {
         id: "abrigo-03",
         titulo: "Camperas De Neopren Hombre Liquidación",
-        img: "../img/Abrigos/Camperas De Neopren Hombre Liquidación.png",
+        img: "./img/Abrigos/Camperas De Neopren Hombre Liquidación.png",
         categorias: {
             nombre: "Abrigos",
             id: "abrigos"
@@ -34,7 +33,7 @@ const productos = [
     {
         id: "abrigo-04",
         titulo: "Tapado Mujer Capucha Ultra Liviana Importada ...!!!",
-        img: "../img/Abrigos/Tapado Mujer Capucha Ultra Liviana Importada ...!!!.png",
+        img: "./img/Abrigos/Tapado Mujer Capucha Ultra Liviana Importada ...!!!.png",
         categorias: {
             nombre: "Abrigos",
             id: "abrigos"
@@ -45,7 +44,7 @@ const productos = [
     {
         id: "camiseta-01",
         titulo: "Camiseta Koi 2022 E-sports.png",
-        img: "../img/Camisetas/Camiseta Koi 2022 E-sports.png",
+        img: "./img/Camisetas/Camiseta Koi 2022 E-sports.png",
         categorias: {
             nombre: "Camisetas",
             id: "camisetas"
@@ -55,7 +54,7 @@ const productos = [
     {
         id: "camiseta-02",
         titulo: "Camiseta Musculosa Basquet Nba Bulls",
-        img: "../img/Camisetas/Camiseta Musculosa Basquet Nba Bulls.png",
+        img: "./img/Camisetas/Camiseta Musculosa Basquet Nba Bulls.png",
         categorias: {
             nombre: "Camisetas",
             id: "camisetas"
@@ -65,7 +64,7 @@ const productos = [
     {
         id: "camiseta-03",
         titulo: "Camisetas G2 2023 E-sports",
-        img: "../img/Camisetas/Camisetas G2 2023 E-sports.png",
+        img: "./img/Camisetas/Camisetas G2 2023 E-sports.png",
         categorias: {
             nombre: "Camisetas",
             id: "camisetas"
@@ -76,7 +75,7 @@ const productos = [
     {
         id: "pantalon-01",
         titulo: "Bombacha Campo Pampero",
-        img: "../img/Pantalones/Bombacha Campo Pampero.png",
+        img: "./img/Pantalones/Bombacha Campo Pampero.png",
         categorias: {
             nombre: "Pantalones",
             id: "pantalones"
@@ -86,7 +85,7 @@ const productos = [
     {
         id: "pantalon-02",
         titulo: "Bombacha De Campo Pampero Lisa - T38 A T60 - Uso Intensivo",
-        img: "../img/Pantalones/Bombacha De Campo Pampero Lisa - T38 A T60 - Uso Intensivo.png",
+        img: "./img/Pantalones/Bombacha De Campo Pampero Lisa - T38 A T60 - Uso Intensivo.png",
         categorias: {
             nombre: "Pantalones",
             id: "pantalones"
@@ -96,7 +95,7 @@ const productos = [
     {
         id: "pantalon-03",
         titulo: "Pantalon Cargo Gabardina Pre Lavada For Men Hard Work",
-        img: "../img/Pantalones/Pantalon Cargo Gabardina Pre Lavada For Men Hard Work.png",
+        img: "./img/Pantalones/Pantalon Cargo Gabardina Pre Lavada For Men Hard Work.png",
         categorias: {
             nombre: "Pantalones",
             id: "pantalones"
@@ -106,7 +105,7 @@ const productos = [
     {
         id: "pantalon-04",
         titulo: "Pantalon Cargo Gabardina",
-        img: "../img/Pantalones/Pantalon Cargo Gabardina.png",
+        img: "./img/Pantalones/Pantalon Cargo Gabardina.png",
         categorias: {
             nombre: "Pantalones",
             id: "pantalones"
@@ -116,7 +115,7 @@ const productos = [
     {
         id: "pantalon-05",
         titulo: "Pantalón Cargo",
-        img: "../img/Pantalones/Pantalón Cargo.png",
+        img: "./img/Pantalones/Pantalón Cargo.png",
         categorias: {
             nombre: "Pantalones",
             id: "pantalones"
